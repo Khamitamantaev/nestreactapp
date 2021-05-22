@@ -1,7 +1,15 @@
 import {SignupContainer} from './signup.container';
+import {PageLayout, ContentLayout, AuthLayout, } from '../../lib/elements/layout'
 
 export function SignupPage() {
   return (
-    <SignupContainer/>
+    <ContentLayout>
+      <PageLayout>
+        <AuthLayout>
+          <SignupContainer>
+          </SignupContainer>
+        </AuthLayout>
+      </PageLayout>
+    </ContentLayout>
   )
 }

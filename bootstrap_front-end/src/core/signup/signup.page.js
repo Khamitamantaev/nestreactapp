@@ -1,5 +1,7 @@
+import {SignupContainer} from './signup.container';
+
 export function SignupPage() {
   return (
-    <h1>Hello Khamit!</h1>
+    <SignupContainer/>
   )
 }

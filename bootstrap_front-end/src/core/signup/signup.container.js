@@ -9,6 +9,7 @@ import { convertSignupFormData } from './signup.convert';
 import { SIGNUP_STORE_NAME } from './signup.constant';
 import { NAVIGATION_STORE_NAME } from '../../lib/common/navigation';
 import { isRequestError, isRequestSuccess, getErrorMessage } from '../../main/store/store.service'
+import { SignupComponent } from './signup.component';
 
 export function SignupContainer() {
 
@@ -35,7 +36,7 @@ export function SignupContainer() {
   };
 
   return (
-    <SignupFormContainer
+    <SignupComponent
       isPending={state.signupForm}
       isError={isRequestError(state.signupForm)}
       isSuccess={isRequestSuccess(state.signupForm)}

@@ -14,7 +14,6 @@ export function SignupFormComponent(props) {
     handleChange,
     handleBlur,
     handleSubmit,
-
     isPending,
     isSuccess,
     isError,
@@ -35,7 +34,7 @@ export function SignupFormComponent(props) {
   return (
     <form onSubmit={handleSubmit}>
       <Container>
-      {pageLoading && 'pageLoading' }
+      {pageLoading && 'pageLoading'}
       <FieldLayout>
         <FieldPrimary
           titleTid="SIGNUP.SIGNUP_FORM.FIELD.LOGIN.TITLE"
@@ -57,8 +56,8 @@ export function SignupFormComponent(props) {
           error={isFieldError(fieldPassword)}
         />
         </FieldLayout>
-        <Button type="submit" >
-          Submit
+        <Button type="submit">
+          Создать аккаунт
         </Button>
       
         {isPending && 'Loading...'}

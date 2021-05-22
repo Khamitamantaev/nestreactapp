@@ -1,5 +1,8 @@
 import React from 'react';
 import { FieldPrimary } from '../../../../lib/elements/field/field.primary';
+import { FieldLayout } from '../../../../lib/elements/layout';
+import { Button } from '../../../../lib/elements/button';
+import styled from 'styled-components';
 
 export function SignupFormComponent(props) {
   const {
@@ -19,8 +22,9 @@ export function SignupFormComponent(props) {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
+      <Container>
+      <FieldLayout>
         <FieldPrimary
           titleTid="SIGNUP.SIGNUP_FORM.FIELD.LOGIN.TITLE"
           placeholderTid="SIGNUP.SIGNUP_FORM.FIELD.LOGIN.PLACEHOLDER"
@@ -30,7 +34,7 @@ export function SignupFormComponent(props) {
           value={values[fieldLogin]}
           error={isFieldError(fieldLogin)}
         />
-        
+
         <FieldPrimary
           titleTid="SIGNUP.SIGNUP_FORM.FIELD.PASSWORD.TITLE"
           placeholderTid="SIGNUP.SIGNUP_FORM.FIELD.PASSWORD.PLACEHOLDER"
@@ -40,11 +44,20 @@ export function SignupFormComponent(props) {
           value={values[fieldPassword]}
           error={isFieldError(fieldPassword)}
         />
-        
-        <button type="submit" disabled={isSubmitting}>
+        </FieldLayout>
+        <Button type="submit" disabled={isSubmitting}>
           Submit
-        </button>
-      </form>
-    </div>
+        </Button>
+      </Container>
+    </form>
   );
 }
+
+
+
+const Container = styled.div`
+  display: grid;
+  gap: 12px;
+`;
+
+

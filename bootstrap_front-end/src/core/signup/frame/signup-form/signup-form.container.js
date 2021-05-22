@@ -11,21 +11,39 @@ export function SignupFormContainer(props) {
   // console.log("----------")
 
 
+  const {
+    initialValue,
+    validation,
+    onSubmitForm,
+    fieldName,
+    isPending,
+    isSuccess,
+    isError,
+    errorMessage,
+    pageLoading,
+  }= props;
+
+
   const LOGIN_NAME = props.fieldName[SIGNUP_FORM_FIELD_KEY.LOGIN];
   const PASSWORD_NAME = props.fieldName[SIGNUP_FORM_FIELD_KEY.PASSWORD];
 
   return (
     <div>
       <Formik
-        initialValues={props.initialValue}
-        validate={props.validation}
-        onSubmit={props.onSubmitForm}
+        initialValues={initialValue}
+        validate={validation}
+        onSubmit={onSubmitForm}
       >
-       {(props)=>(
+       {(formProps)=>(
          <SignupFormComponent
          fieldPassword={PASSWORD_NAME}
           fieldLogin={LOGIN_NAME}
-          {...props}
+          {...formProps}
+          isPending={isPending}
+          isSuccess={isSuccess}
+          isError={isError}
+          errorMessage={errorMessage}
+          pageLoading={pageLoading}
          />
        )}
       </Formik>

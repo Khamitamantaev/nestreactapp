@@ -1,7 +1,7 @@
 import { routesInit } from './router.core';
-import {SignupRouter, SIGNUP_ROUTE_PATH } from '../../core/signup';
+import {signupRouter, SIGNUP_ROUTE_PATH } from '../../core/signup';
 export const routes = {
-    [SIGNUP_ROUTE_PATH]:SignupRouter 
+    [SIGNUP_ROUTE_PATH]:signupRouter 
 
 };
 

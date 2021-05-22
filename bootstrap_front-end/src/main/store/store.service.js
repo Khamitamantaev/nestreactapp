@@ -153,7 +153,10 @@ export const isRequestSuccess = (state = {}) => !!state.success;
 export const isRequestError = (state = {}) => !!state.error;
 export const isRequestUpdatePending = (state = {}) => !!state.updating;
 export const isRequestUpdateSuccess = (state = {}) => !!state.updated;
+export const getData = (state = {}, defaultValue = {}) => {
+  state.data || defaultValue;
+}
 export const getRequestData = (state = {}, defaultValue = {}) =>
   state.data || defaultValue;
-export const getRequestErrorMessage = (state = {}) =>
+export const getErrorMessage = (state = {}) =>
   state.errorMessage || null;

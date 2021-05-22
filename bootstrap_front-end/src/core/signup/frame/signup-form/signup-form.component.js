@@ -14,16 +14,28 @@ export function SignupFormComponent(props) {
     handleChange,
     handleBlur,
     handleSubmit,
-    isSubmitting,
+
+    isPending,
+    isSuccess,
+    isError,
+    errorMessage,
+    pageLoading,
   } = props;
 
   const isFieldError = (name) => {
     return errors[name] && touched[name] && errors[name];
   };
 
+  const isSubmitDisabled = () => {
+    return isPending || isSuccess
+  }
+
+  // console.log(isError, errorMessage)
+
   return (
     <form onSubmit={handleSubmit}>
       <Container>
+      {pageLoading && 'pageLoading' }
       <FieldLayout>
         <FieldPrimary
           titleTid="SIGNUP.SIGNUP_FORM.FIELD.LOGIN.TITLE"
@@ -45,9 +57,12 @@ export function SignupFormComponent(props) {
           error={isFieldError(fieldPassword)}
         />
         </FieldLayout>
-        <Button type="submit" disabled={isSubmitting}>
+        <Button type="submit" >
           Submit
         </Button>
+      
+        {isPending && 'Loading...'}
+        {isError && errorMessage}
       </Container>
     </form>
   );

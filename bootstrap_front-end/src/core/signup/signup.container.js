@@ -34,7 +34,7 @@ export function SignupContainer() {
       [SIGNUP_FIELD_NAME.PASSWORD]: '',
     };
   };
-
+//Проблема где то здесь, не выгружается state.signupForm для получение текущего состояния isPending и pageLoading
   return (
     <SignupComponent
       isPending={state.signupForm}

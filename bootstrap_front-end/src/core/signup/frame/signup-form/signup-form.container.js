@@ -22,10 +22,10 @@ export function SignupFormContainer(props) {
     errorMessage,
     pageLoading,
   }= props;
+  
 
-
-  const LOGIN_NAME = props.fieldName[SIGNUP_FORM_FIELD_KEY.LOGIN];
-  const PASSWORD_NAME = props.fieldName[SIGNUP_FORM_FIELD_KEY.PASSWORD];
+  const LOGIN_NAME = fieldName[SIGNUP_FORM_FIELD_KEY.LOGIN];
+  const PASSWORD_NAME = fieldName[SIGNUP_FORM_FIELD_KEY.PASSWORD];
 
   return (
     <div>

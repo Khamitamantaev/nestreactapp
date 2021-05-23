@@ -13,9 +13,10 @@ export function signupFormUploadData (data) {
     dispatch({
       type: SIGNUP_ACTION_TYPE.SIGNUP_FORM_UPLOAD_PENDING,
     })
-
+ 
     try {
-     const res = await httpRequest({method: SIGNUP_API.SIGNUP_FORM_UPLOAD.METHOD,
+     const res = await httpRequest({
+      method: SIGNUP_API.SIGNUP_FORM_UPLOAD.METHOD,
       url: SIGNUP_API.SIGNUP_FORM_UPLOAD.ENDPOINT,
       data})
       

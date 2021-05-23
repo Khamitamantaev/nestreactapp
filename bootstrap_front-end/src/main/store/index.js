@@ -13,7 +13,7 @@ export const reducers = combineReducers({
   [AUTH_STORE_NAME]: authStore,
   [LANG_STORE_NAME]: langStore,
   [NAVIGATION_STORE_NAME]: navigationStore,
-  [SIGNUP_STORE_NAME]:signupStore,
+  [SIGNUP_STORE_NAME]: signupStore,
 });
 
 export { initStore } from './store.core';

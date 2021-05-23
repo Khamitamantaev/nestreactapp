@@ -21,6 +21,8 @@ export function SignupFormComponent(props) {
     pageLoading,
   } = props;
 
+  console.log(props)
+
   const isFieldError = (name) => {
     return errors[name] && touched[name] && errors[name];
   };
@@ -34,7 +36,7 @@ export function SignupFormComponent(props) {
   return (
     <form onSubmit={handleSubmit}>
       <Container>
-      {pageLoading && 'pageLoading'}
+      {pageLoading.pageLoading && 'pageLoading'}
       <FieldLayout>
         <FieldPrimary
           titleTid="SIGNUP.SIGNUP_FORM.FIELD.LOGIN.TITLE"
@@ -56,11 +58,10 @@ export function SignupFormComponent(props) {
           error={isFieldError(fieldPassword)}
         />
         </FieldLayout>
-        <Button type="submit">
+        <Button type="submit" disabled={!isSubmitDisabled()}>
           Создать аккаунт
         </Button>
-      
-        {isPending && 'Loading...'}
+        {isPending.pending && 'Loading...'}
         {isError && errorMessage}
       </Container>
     </form>

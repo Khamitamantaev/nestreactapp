@@ -8,9 +8,9 @@ export function SignupComponent(props) {
       <RegisterLayout>
         <div>Регистрация</div>
       </RegisterLayout>
-      <SignupFormContainer {...props} />
+          <SignupFormContainer {...props} />
       <HaveAccountLayout>
-        <div>Есть аккаунт? Войти</div>
+        <div>Есть аккаунт? <a href="#">Войти</a></div>
       </HaveAccountLayout>
     </div>
   );

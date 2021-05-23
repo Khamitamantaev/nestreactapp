@@ -28,7 +28,7 @@ export function SignupFormComponent(props) {
   };
 
   const isSubmitDisabled = () => {
-    return isPending || isSuccess
+    return isPending.pending || isSuccess
   }
 
   // console.log(isError, errorMessage)
@@ -58,7 +58,7 @@ export function SignupFormComponent(props) {
           error={isFieldError(fieldPassword)}
         />
         </FieldLayout>
-        <Button type="submit" disabled={!isSubmitDisabled()}>
+        <Button type="submit" disabled={isSubmitDisabled()}>
           Создать аккаунт
         </Button>
         {isPending.pending && 'Loading...'}

@@ -8,7 +8,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import { convertSignupFormData } from './signup.convert';
 import { SIGNUP_STORE_NAME } from './signup.constant';
 import { NAVIGATION_STORE_NAME } from '../../lib/common/navigation';
-import { isRequestError, isRequestSuccess, getErrorMessage } from '../../main/store/store.service'
+import { isRequestError, isRequestSuccess, getErrorMessage, isRequestPending } from '../../main/store/store.service'
 import { SignupComponent } from './signup.component';
 
 export function SignupContainer() {
@@ -37,7 +37,7 @@ export function SignupContainer() {
 //Проблема где то здесь, не выгружается state.signupForm для получение текущего состояния isPending и pageLoading
   return (
     <SignupComponent
-      isPending={state.signupForm}
+      isPending={isRequestPending(state.signupForm)}
       isError={isRequestError(state.signupForm)}
       isSuccess={isRequestSuccess(state.signupForm)}
       errorMessage={getErrorMessage(state.signupForm)}

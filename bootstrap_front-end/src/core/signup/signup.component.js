@@ -2,6 +2,7 @@ import React from 'react';
 import { SignupFormContainer } from './frame/signup-form';
 import { SignupTitleComponent } from './frame/signup-form/signup-title.component';
 import {SIGNUP_TITLE_KEY } from './frame/signup-form'
+import styled from 'styled-components'
 
 export function SignupComponent(props) {
 
@@ -14,9 +15,9 @@ export function SignupComponent(props) {
 
   return (
     <div>
-      <SignupTitleComponent registerTitle={REGISTRATION}  />
+      <SignupTitleComponent registerTitle={REGISTRATION}/>
       <SignupFormContainer {...props} />
-      <SignupTitleComponent registerTitle={ACCOUNT} />
+      <SignupTitleComponent registerTitle={ACCOUNT}/>
     </div>
   );
 }

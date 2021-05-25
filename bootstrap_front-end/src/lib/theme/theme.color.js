@@ -1,4 +1,7 @@
 export const THEME_COLOR = {
   PRIMARY: '#fff',
   TEXT_SECONDARY: '#707070',
+  BUTTON_BACKGROUND_COLOR: '#9999ff',
+  BUTTON_TEXT_COLOR: 'black',
+  BUTTON_BORDER_COLOR: 'blue'
 };

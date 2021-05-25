@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-
+import { THEME_COLOR, THEME_SIZE } from '../../theme'
+import { spacing } from '../../theme'
 export const Button = styled.button`
-
-background-color: #9999ff;
-border-radius: 10px;
-border: 2px solid blue;
-color: black;
-margin: 0 1em;
-padding: 0.25em 1em;
+background-color: ${THEME_COLOR.BUTTON_BACKGROUND_COLOR};
+border-radius: ${spacing(3)};
+border: ${spacing(0.5)} solid ${THEME_COLOR.BUTTON_BORDER_COLOR};
+color: ${THEME_COLOR.BUTTON_TEXT_COLOR};
+margin: ${THEME_SIZE.BUTTON_M_P.MARGIN};
+padding:${THEME_SIZE.BUTTON_M_P.PADDING};
 `

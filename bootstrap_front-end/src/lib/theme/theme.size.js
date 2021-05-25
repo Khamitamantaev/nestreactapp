@@ -16,4 +16,8 @@ export const THEME_SIZE = {
     DEFAULT: '16px',
     SMALL: '14px',
   },
+  BUTTON_M_P: {
+    MARGIN: '0 1em',
+    PADDING: '0.25em 1em'
+  }
 };

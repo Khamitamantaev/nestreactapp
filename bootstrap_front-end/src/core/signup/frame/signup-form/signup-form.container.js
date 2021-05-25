@@ -12,6 +12,7 @@ export function SignupFormContainer(props) {
 
 
   const {
+    title,
     initialValue,
     validation,
     onSubmitForm,
@@ -36,7 +37,8 @@ export function SignupFormContainer(props) {
       >
        {(formProps)=>(
          <SignupFormComponent
-         fieldPassword={PASSWORD_NAME}
+          title={title}
+          fieldPassword={PASSWORD_NAME}
           fieldLogin={LOGIN_NAME}
           {...formProps}
           isPending={isPending}

@@ -19,5 +19,9 @@ export const THEME_SIZE = {
   BUTTON_M_P: {
     MARGIN: '0 1em',
     PADDING: '0.25em 1em'
+  },
+  AUTH_LAYOUT: {
+    SMALL: '360px',
+    MARGIN: '0 auto'
   }
 };

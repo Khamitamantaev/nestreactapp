@@ -23,5 +23,8 @@ export const THEME_SIZE = {
   AUTH_LAYOUT: {
     SMALL: '360px',
     MARGIN: '0 auto'
+  },
+  INPUT: {
+    PADDING: '5px 10px'
   }
 };

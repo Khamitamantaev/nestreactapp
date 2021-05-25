@@ -22,3 +22,13 @@ export const SIGNUP_DATA_NAME = {
   LOGIN: 'login',
   PASSWORD: 'password',
 }
+
+export const SIGNUP_TITLE_NAME = {
+  REGISTRATION: 'Регистрация',
+  ACCOUNT: 'Есть аккаунт? Вход'
+}
+
+export const SIGNUP_TITLE_FIELD_NAME = {
+  [SIGNUP_TITLE_NAME.REGISTRATION]: SIGNUP_TITLE_NAME.REGISTRATION,
+  [SIGNUP_TITLE_NAME.ACCOUNT]: SIGNUP_TITLE_NAME.ACCOUNT,
+};

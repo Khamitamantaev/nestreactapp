@@ -1,14 +1,22 @@
 import React from 'react';
 import { SignupFormContainer } from './frame/signup-form';
+import { SignupTitleComponent } from './frame/signup-form/signup-title.component';
+import {SIGNUP_TITLE_KEY } from './frame/signup-form'
 
 export function SignupComponent(props) {
+
+  const {
+    title
+  } = props
+
+  const REGISTRATION = title[SIGNUP_TITLE_KEY.REGISTRATION];
+  const ACCOUNT = title[SIGNUP_TITLE_KEY.ACCOUNT];
+
   return (
     <div>
-      <div>Регистрация</div>
+      <SignupTitleComponent registerTitle={REGISTRATION}  />
       <SignupFormContainer {...props} />
-      <div>
-        Есть аккаунт? <a href="#">Войти</a>
-      </div>
+      <SignupTitleComponent registerTitle={ACCOUNT} />
     </div>
   );
 }

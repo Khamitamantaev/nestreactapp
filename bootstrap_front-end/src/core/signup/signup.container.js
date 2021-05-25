@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik } from 'formik';
 import { signupFormValidation } from './signup.validation';
-import {SIGNUP_FIELD_NAME, SIGNUP_FORM_FIELD_NAME } from './signup.type';
+import {SIGNUP_FIELD_NAME, SIGNUP_FORM_FIELD_NAME, SIGNUP_TITLE_NAME } from './signup.type';
 import { SignupFormContainer } from './frame/signup-form';
 import { signupFormUploadData } from './signup.action';
 import {useDispatch, useSelector} from 'react-redux'
@@ -34,9 +34,10 @@ export function SignupContainer() {
       [SIGNUP_FIELD_NAME.PASSWORD]: '',
     };
   };
-//Проблема где то здесь, не выгружается state.signupForm для получение текущего состояния isPending и pageLoading
+
   return (
     <SignupComponent
+      title={SIGNUP_TITLE_NAME}
       isPending={isRequestPending(state.signupForm)}
       isError={isRequestError(state.signupForm)}
       isSuccess={isRequestSuccess(state.signupForm)}
